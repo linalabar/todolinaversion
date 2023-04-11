@@ -1,5 +1,6 @@
 <?php
 
+
 error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -19,7 +20,7 @@ include("lib/func.user.php");
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$dbname = 'mydb_todo';
+$dbname = 'db_todo';
 
 $db = new db($dbhost, $dbuser, $dbpass, $dbname);
 

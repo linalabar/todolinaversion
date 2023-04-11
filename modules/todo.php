@@ -13,8 +13,7 @@ switch($vars['action']){
     case "do_add":{
         $db->query("INSERT INTO items (user_id, title) VALUES (?, ?)",$appuser['user_id'], $vars['title']);
         header("location: index.php");
-        exit;        
-        
+        exit;
     }break;
     
     case "delete":{
