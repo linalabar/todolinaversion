@@ -12,5 +12,5 @@ define('LANG_LOGIN','Login');
 define('LANG_SIGNUP_NOT_ACCOUNT','Singup if you don\'t have an account');
 define('LANG_INCORRECT_EMAIL_PASSWORD','Incorrect Email or Password');
 define('LANG_YOU_NEED_TO_PROVIDE_EMAIL','You need to provide an email address');
-
+define('LANG_LOGOUT','Logout');
 ?>

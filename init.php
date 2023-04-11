@@ -4,19 +4,22 @@ error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-define('APP_LANG','en');
-
+// Load the appropriate language file based on the user's language preference
+if (isset($_COOKIE['lang'])) {
+  $lang = $_COOKIE['lang'];
+} else {
+  $lang = 'en'; // Default language if no preference is set
+}
+include 'lang/' . $lang . '.php';
 include("lib/db.php");
 include("lib/utils.php");
-include("lang/".APP_LANG.".php");
-
 include("lib/func.user.php");
 
 //It is very stupid to share passwords within GIT, but for demostration, we will close our eyes on this principle.
 $dbhost = 'localhost';
-$dbuser = 'u229483663_todo';
-$dbpass = 'Ensia123456';
-$dbname = 'u229483663_todo';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'mydb_todo';
 
 $db = new db($dbhost, $dbuser, $dbpass, $dbname);
 

@@ -21,5 +21,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
 
 </head>
 <body>
+<!-- Language Switcher Dropdown Menu -->
+<select onchange="changeLanguage(this.value)">
+  <option value="en">English</option>
+  <option value="fr">Français</option>
+</select>
+
+<script>
+function changeLanguage(lang) {
+  // Set language cookie or session variable
+  document.cookie = "lang=" + lang + ";path=/";
+}
+</script>
 <div class="container">
   <div class="row justify-content-center align-items-center main-row">

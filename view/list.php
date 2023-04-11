@@ -1,4 +1,3 @@
-
     <div class="col shadow main-col bg-white">
       <div class="row bg-primary text-white">
         <div class="col  p-2">
@@ -6,7 +5,7 @@
         </div>
         <div class="col">
              <div class="float-right p-2" >
-                <a href="index.php?action=logout"><b style="color:white;">Logout</b></a>
+                <a href="index.php?action=logout"><b style="color:white;"><?php echo LANG_LOGOUT;?></b></a>
             </div>
         </div>
       </div>
@@ -35,14 +34,14 @@
                       <input type="checkbox"  >
                     </div>
                   </div>
-                  <input type="text" readonly class="form-control " aria-label="Text input with checkbox" value="<?php echo htmlspecialchars($items[$i]['title']);?>">
+                  <input type="text" class="form-control " aria-label="Text input with checkbox" value="<?php echo htmlspecialchars($items[$i]['title']);?>" onchange="location='index.php?action=do_edit&item_id=<?php echo $items[$i]['item_id'];?>&title='+encodeURIComponent(this.value)">
                   <div class="input-group-append">
                     <button  class="btn btn-outline-secondary bg-danger text-white" type="button"  id="button-addon2" onclick="location='index.php?action=delete&item_id=<?php echo $items[$i]['item_id'];?>'">X</button>
                   </div>
                   </div>
             </div>
   
-            
+             
             <?php
             }
           ?>
